@@ -6,7 +6,7 @@
 /*   By: qho <qho@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/13 10:34:11 by qho               #+#    #+#             */
-/*   Updated: 2017/05/13 21:58:01 by qho              ###   ########.fr       */
+/*   Updated: 2017/05/14 03:41:00 by tzhou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,13 +103,13 @@ void	ft_find_value(t_table *table, char *key)
 	if (curr == NULL || curr->key == NULL || (ft_strcmp(key, curr->key) != 0))
 	{
 		ft_putstr(key);
-		ft_putstr("-search ");
-		ft_putendl("Not found.");
+//		ft_putstr("-search ");
+		ft_putendl(": Not found.");
 	}
 	else
 	{
-		ft_putstr(key);
-		ft_putstr("-search ");
+//		ft_putstr(key);
+//		ft_putstr("-search ");
 		ft_putendl(curr->value);
 	}
 }
