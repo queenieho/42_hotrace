@@ -6,7 +6,7 @@
 /*   By: qho <qho@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/13 10:33:27 by qho               #+#    #+#             */
-/*   Updated: 2017/05/13 15:48:01 by qho              ###   ########.fr       */
+/*   Updated: 2017/05/13 20:03:48 by qho              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,12 @@
 # include <stdlib.h>
 
 # define BUFF_SIZE 32
-# define TABLE_SIZE 3000000
+# define TABLE_SIZE 31121
+// # define TABLE_SIZE 3000017
+/*
+** first prime number over 3 million to fit the largest file. 
+** Prime number for better hash key
+*/
 
 # ifndef ERRORS
 #  define ERR(a, b) if(a){return(b);}
@@ -32,14 +37,14 @@
 
 typedef struct			s_input
 {
-	unsigned long		key;
+	char				*key;
 	char				*value;
 }						t_input;
 
 typedef struct			s_content
 {
-	unsigned long		key;
-	char				*data;
+	char				*key;
+	char				*value;
 	struct s_content	*next;
 }						t_content;
 
